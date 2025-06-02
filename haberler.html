@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haberler - ArabaDünyası</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                  <!-- Hamburger Buton (Mobilde Gözükecek) -->
+      <button id="menu-button" class="md:hidden text-red-600 text-3xl focus:outline-none">
+        ☰
+      </button>
+      <a href="index.html"><h1 class="text-2xl font-bold text-red-600">ArabaDünyası</h1></a>
+      <ul class="flex space-x-6 hidden md:flex md:space-x-6 md:items-center">
+        <li><a href="index.html" class="hover:text-red-500">Ana Sayfa</a></li>
+        <li><a href="brands.html" class="hover:text-red-500">Markalar</a></li>
+        <li><a href="haberler.html" class="text-red-600 font-semibold">Haberler</a></li>
+        <li><a href="blog.html" class="hover:text-red-500">Blog</a></li>
+        <li><a href="iletisim.html" class="hover:text-red-500">İletişim</a></li>
+      </ul>
+      <div id="fuelPrices" class="font-semibold"></div>
+    </div>
+
+        <!-- Mobilde açılır menü -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <ul class="space-y-2">
+          <li><a href="index.html" class="block hover:text-red-500">Ana Sayfa</a></li>
+          <li><a href="brands.html" class="block hover:text-red-500">Markalar</a></li>
+          <li><a href="haberler.html" class="block text-red-600 font-semibold">Haberler</a></li>
+          <li><a href="blog.html" class="block hover:text-red-500">Blog</a></li>
+          <li><a href="iletisim.html" class="block hover:text-red-500">İletişim</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- Başlık -->
+  <section class="bg-red-600 text-white py-16 text-center">
+    <h2 class="text-4xl font-bold mb-4">Son Araba Haberleri</h2>
+    <p class="text-lg">Güncel gelişmeleri buradan takip edebilirsiniz.</p>
+  </section>
+
+  <!-- Haber Listesi -->
+  <main class="flex-grow max-w-7xl mx-auto py-12 px-4">
+    <div class="grid md:grid-cols-2 gap-6">
+      
+      <!-- Haber Kartı -->
+      <a href="haberdetay-1.html" class="block bg-white rounded-lg shadow hover:shadow-lg transition p-6">
+        <img src="https://www.usnews.com/object/image/00000191-e1a3-d4fa-a9b3-e9afe59f0001/modelx-62.jpg?update-time=1726842469131&size=responsive640" alt="Tesla Model X" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">2025 Tesla Model X Tanıtıldı!</h3>
+        <p class="text-gray-600 text-sm">Yeni özellikler ve menzil geliştirmeleri dikkat çekiyor.</p>
+      </a>
+
+      <!-- Haber Kartı -->
+      <a href="haberdetay-2.html" class="block bg-white rounded-lg shadow hover:shadow-lg transition p-6">
+        <img src="https://www.topgear.com/sites/default/files/2023/07/P90494357_highRes_bmw-ix5-hydrogen-on-.jpg" alt="BMW" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">BMW Elektrikli Araç Serisini Genişletiyor</h3>
+        <p class="text-gray-600 text-sm">Yeni SUV model iX5 tanıtıldı. Tasarım ve menzil özellikleriyle dikkat çekiyor.</p>
+      </a>
+
+      <!-- Haber Kartı -->
+      <a href="haberdetay-3.html" class="block bg-white rounded-lg shadow hover:shadow-lg transition p-6">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/2025-audi-e-tron-gt-102-66743d083580e.jpg?crop=0.646xw:0.546xh;0.112xw,0.248xh&resize=1200:*" alt="Audi" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Audi, Yeni Elektrikli Coupe Modeli e-Tron GT2’yi Tanıttı</h3>
+        <p class="text-gray-600 text-sm">Performans ve verimlilikte sınırları zorlayan yepyeni bir coupe.</p>
+      </a>
+
+      <!-- Haber Kartı -->
+      <a href="haberdetay-4.html" class="block bg-white rounded-lg shadow hover:shadow-lg transition p-6">
+        <img src="https://i.bstr.es/drivingeco/2021/03/porsche-taycan-cross-turismo-01-1220x814.jpg" alt="Porsche" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Porsche, Taycan Cross Turismo 2.0 ile Sınırları Zorluyor</h3>
+        <p class="text-gray-600 text-sm">Geliştirilmiş performans ve menzil ile Taycan ailesi büyüyor.</p>
+      </a>
+
+      <!-- Haber Kartı -->
+      <a href="haberdetay-5.html" class="block bg-white rounded-lg shadow hover:shadow-lg transition p-6">
+        <img src="https://www.cityam.com/wp-content/uploads/2023/03/LB744-EXTERIORS-9-1.jpg" alt="Lamborghini" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Lamborghini, Elektrikli Süper SUV Modeli Revuelto EV'yi Duyurdu</h3>
+        <p class="text-gray-600 text-sm">Güç, hız ve sürdürülebilirlik bir arada.</p>
+      </a>
+
+      <!-- Haber Kartı -->
+      <a href="haberdetay-6.html" class="block bg-white rounded-lg shadow hover:shadow-lg transition p-6">
+        <img src="https://images.hindustantimes.com/auto/img/2023/06/30/600x338/Ferrari_SF90_Stradale_2_1688101478736_1688101499052.jpg" alt="Ferrari" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Ferrari'den Elektrikli Süper Otomobil Atağı</h3>
+        <p class="text-gray-600 text-sm">SF90e modeliyle performansta yeni bir çağ başlıyor.</p>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 ArabaDünyası. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+  // Akaryakıt fiyatları JSON dosyasının yolu
+  const fuelDataUrl = 'akaryakit.json'; // JSON dosyanın yolunu doğru yaz
+
+  // Kullanıcının şehrini IP tabanlı servisle alacağız
+  fetch('https://ipinfo.io?token=a3bde3d00adaf7') //   https://ipinfo.io?token=a3bde3d00adaf7  BUNU UNUTMA
+    .then(response => response.json())
+    .then(locationData => {
+      const userCity = locationData.city;
+      if (!userCity) throw new Error('Şehir bilgisi alınamadı.');
+
+      // JSON dosyasını çek
+      fetch(fuelDataUrl)
+        .then(response => response.json())
+        .then(prices => {
+          const cityPrices = prices[userCity];
+          const fuelPricesElement = document.getElementById('fuelPrices');
+
+          if (cityPrices) {
+  fuelPricesElement.innerHTML = `
+    <span class="text-blue-600 font-bold">${userCity}</span> - 
+    <span class="text-red-600">Benzin: ${cityPrices.benzin} TL/L</span>, 
+    <span class="text-yellow-600">Dizel: ${cityPrices.dizel} TL/L</span>, 
+    <span class="text-green-600">LPG: ${cityPrices.lpg} TL/L</span>
+  `;
+} else {
+            fuelPricesElement.innerText = `${userCity} için fiyat bilgisi bulunamadı.`;
+          }
+        });
+    })
+    .catch(error => {
+      document.getElementById('fuelPrices').innerText = 'Akaryakıt için konum veya fiyat verisi alınamadı.';
+      console.error(error);
+    });
+</script>
+
+<script>
+  const btn = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

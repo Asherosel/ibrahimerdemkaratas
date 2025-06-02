@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - ArabaDünyası</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                              <!-- Hamburger Buton (Mobilde Gözükecek) -->
+      <button id="menu-button" class="md:hidden text-red-600 text-3xl focus:outline-none">
+        ☰
+      </button>
+      <a href="index.html"><h1 class="text-2xl font-bold text-red-600">ArabaDünyası</h1></a>
+      <ul class="flex space-x-6 hidden md:flex md:space-x-6 md:items-center">
+        <li><a href="index.html" class="hover:text-red-500">Ana Sayfa</a></li>
+        <li><a href="brands.html" class="hover:text-red-500">Markalar</a></li>
+        <li><a href="haberler.html" class="hover:text-red-500">Haberler</a></li>
+        <li><a href="blog.html" class="text-red-600 font-semibold">Blog</a></li>
+        <li><a href="iletisim.html" class="hover:text-red-500">İletişim</a></li>
+      </ul>
+      <div id="fuelPrices" class="font-semibold"></div>
+    </div>
+
+        <!-- Mobilde açılır menü -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <ul class="space-y-2">
+          <li><a href="index.html" class="block hover:text-red-500">Ana Sayfa</a></li>
+          <li><a href="brands.html" class="block hover:text-red-500">Markalar</a></li>
+          <li><a href="haberler.html" class="block hover:text-red-500">Haberler</a></li>
+          <li><a href="blog.html" class="block text-red-600 font-semibold">Blog</a></li>
+          <li><a href="iletisim.html" class="block hover:text-red-500">İletişim</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-red-600 text-white py-12 text-center">
+    <h2 class="text-4xl font-bold">Otomobil Rehberleri ve Bilgilendirici Blog Yazıları</h2>
+    <p class="mt-2 text-gray-200">Ehliyet süreçleri, trafik cezaları ve daha fazlası burada!</p>
+  </section>
+
+  <!-- Blog Listesi -->
+  <main class="flex-grow max-w-6xl mx-auto py-12 px-4 grid gap-8 md:grid-cols-2">
+
+    <!-- Blog Kartı -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <img src="https://www.allianz.com.tr/content/dam/onemarketing/aztr/allianz/ana-gorsel/seninle-guzel/banner/2024-ehliyet-siniflari-rehberi-1.png.thumb.1280.1280.png?ck=1748248382" alt="Ehliyet Rehberi" class="rounded-t-lg mb-4 w-full h-40 object-cover">
+      <h3 class="text-xl font-semibold mb-2">2025 Ehliyet Alma Rehberi</h3>
+      <p class="text-gray-600 mb-4">Ehliyet almak isteyenler için tüm aşamaları ve dikkat edilmesi gerekenleri listeledik.</p>
+      <a href="blogdetay-1.html" class="text-red-600 hover:underline font-medium">Devamını oku →</a>
+    </div>
+
+    <!-- Blog Kartı -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <img src="https://www.capa.av.tr/wp-content/uploads/2024/03/2024-trafik-cezalari.jpg" alt="Trafik Cezaları ve Puan Sistemi" class="rounded-t-lg mb-4 w-full h-40 object-cover">
+      <h3 class="text-xl font-semibold mb-2">Trafik Cezaları ve Puan Sistemi</h3>
+      <p class="text-gray-600 mb-4">Yeni yılda uygulanan trafik ceza tutarları ve puan sistemine dair detaylar.</p>
+      <a href="blogdetay-2.html" class="text-red-600 hover:underline font-medium">Devamını oku →</a>
+    </div>
+
+    <!-- Blog Kartı -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <img src="https://staticb.yolcu360.com/blog/wp-content/uploads/2021/10/11182948/istanbul-surucu-kurslari-direksiyon-egitimi-acemi-sofor-egitmen.jpg" alt="Yeni Sürücüler İçin Öneriler" class="rounded-t-lg mb-4 w-full h-40 object-cover">
+      <h3 class="text-xl font-semibold mb-2">Yeni Sürücüler İçin Öneriler</h3>
+      <p class="text-gray-600 mb-4">Yola yeni çıkanlar için güvenli sürüş tüyoları ve temel kurallar.</p>
+      <a href="blogdetay-3.html" class="text-red-600 hover:underline font-medium">Devamını oku →</a>
+    </div>
+
+    <!-- Blog Kartı -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <img src="https://otosec.com.tr/storage/araba-kasa-tipleri-nelerdir.jpg" alt="Hangi Araç Tipi Size Uygun?" class="rounded-t-lg mb-4 w-full h-40 object-cover">
+      <h3 class="text-xl font-semibold mb-2">Hangi Araç Tipi Size Uygun?</h3>
+      <p class="text-gray-600 mb-4">SUV, sedan, hatchback... Seçiminizi yapmadan önce bu yazıya göz atın!</p>
+      <a href="blogdetay-4.html" class="text-red-600 hover:underline font-medium">Devamını oku →</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 ArabaDünyası. Tüm hakları saklıdır.</p>
+  </footer>
+
+
+  <script>
+  // Akaryakıt fiyatları JSON dosyasının yolu
+  const fuelDataUrl = 'akaryakit.json'; // JSON dosyanın yolunu doğru yaz
+
+  // Kullanıcının şehrini IP tabanlı servisle alacağız
+  fetch('https://ipinfo.io?token=a3bde3d00adaf7') //   https://ipinfo.io?token=a3bde3d00adaf7  BUNU UNUTMA
+    .then(response => response.json())
+    .then(locationData => {
+      const userCity = locationData.city;
+      if (!userCity) throw new Error('Şehir bilgisi alınamadı.');
+
+      // JSON dosyasını çek
+      fetch(fuelDataUrl)
+        .then(response => response.json())
+        .then(prices => {
+          const cityPrices = prices[userCity];
+          const fuelPricesElement = document.getElementById('fuelPrices');
+
+          if (cityPrices) {
+  fuelPricesElement.innerHTML = `
+    <span class="text-blue-600 font-bold">${userCity}</span> - 
+    <span class="text-red-600">Benzin: ${cityPrices.benzin} TL/L</span>, 
+    <span class="text-yellow-600">Dizel: ${cityPrices.dizel} TL/L</span>, 
+    <span class="text-green-600">LPG: ${cityPrices.lpg} TL/L</span>
+  `;
+} else {
+            fuelPricesElement.innerText = `${userCity} için fiyat bilgisi bulunamadı.`;
+          }
+        });
+    })
+    .catch(error => {
+      document.getElementById('fuelPrices').innerText = 'Akaryakıt için konum veya fiyat verisi alınamadı.';
+      console.error(error);
+    });
+</script>
+<script>
+  const btn = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

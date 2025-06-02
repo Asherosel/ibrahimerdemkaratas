@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markalar - ArabaDünyası</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                        <!-- Hamburger Buton (Mobilde Gözükecek) -->
+      <button id="menu-button" class="md:hidden text-red-600 text-3xl focus:outline-none">
+        ☰
+      </button>
+      <a href="index.html"><h1 class="text-2xl font-bold text-red-600">ArabaDünyası</h1></a>
+      <ul class="flex space-x-6 hidden md:flex md:space-x-6 md:items-center">
+        <li><a href="index.html" class="hover:text-red-500">Ana Sayfa</a></li>
+        <li><a href="brands.html" class="text-red-600 font-semibold">Markalar</a></li>
+        <li><a href="haberler.html" class="hover:text-red-500">Haberler</a></li>
+        <li><a href="blog.html" class="hover:text-red-500">Blog</a></li>
+        <li><a href="iletisim.html" class="hover:text-red-500">İletişim</a></li>
+      </ul>
+      <div id="fuelPrices" class="font-semibold"></div>
+    </div>
+
+        <!-- Mobilde açılır menü -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <ul class="space-y-2">
+          <li><a href="index.html" class="block hover:text-red-500 font-semibold">Ana Sayfa</a></li>
+          <li><a href="brands.html" class="block text-red-600 font-semibold">Markalar</a></li>
+          <li><a href="haberler.html" class="block hover:text-red-500">Haberler</a></li>
+          <li><a href="blog.html" class="block hover:text-red-500">Blog</a></li>
+          <li><a href="iletisim.html" class="block hover:text-red-500">İletişim</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- Sayfa Başlığı -->
+  <section class="bg-red-600 text-white py-16 text-center">
+    <h2 class="text-4xl font-bold mb-2">Araba Markaları</h2>
+    <p class="text-lg">Popüler ve prestijli otomobil markalarına göz at</p>
+  </section>
+  <main class="flex-grow">
+  <!-- Marka Kartları -->
+  <section class="max-w-7xl mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6">Tüm Markalar</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <a href="bmw.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">BMW</p>
+      </div>
+    </a>
+    <a href="mercedes.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Mercedes-Benz_Star.svg/1024px-Mercedes-Benz_Star.svg.png" alt="Mercedes" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Mercedes</p>
+      </div>
+    </a>
+    <a href="tesla.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" alt="Tesla" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Tesla</p>
+      </div>
+    </a>
+    <a href="audi.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg" alt="Audi" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Audi</p>
+      </div>
+    </a>
+    <a href="ferrari.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Ferrari_wordmark.svg" alt="Ferrari" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Ferrari</p>
+      </div>
+    </a>
+      <a href="porsche.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Porsche_Wortmarke.svg" alt="Porsche" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Porsche</p>
+      </div>
+      </a>
+      <a href="lamborghini.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Lamborghini_-_logo_wordmark_%28italy%2C_1963-%29.svg" alt="Lamborghini" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Lamborghini</p>
+      </div>
+      </a>
+      <a href="toyota.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg" alt="Toyota" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Toyota</p>
+      </div>
+      </a>
+    </div>
+  </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 ArabaDünyası. Tüm hakları saklıdır.</p>
+  </footer>
+
+
+  <script>
+  // Akaryakıt fiyatları JSON dosyasının yolu
+  const fuelDataUrl = 'akaryakit.json'; // JSON dosyanın yolunu doğru yaz
+
+  // Kullanıcının şehrini IP tabanlı servisle alacağız
+  fetch('https://ipinfo.io?token=a3bde3d00adaf7') //   https://ipinfo.io?token=a3bde3d00adaf7  BUNU UNUTMA
+    .then(response => response.json())
+    .then(locationData => {
+      const userCity = locationData.city;
+      if (!userCity) throw new Error('Şehir bilgisi alınamadı.');
+
+      // JSON dosyasını çek
+      fetch(fuelDataUrl)
+        .then(response => response.json())
+        .then(prices => {
+          const cityPrices = prices[userCity];
+          const fuelPricesElement = document.getElementById('fuelPrices');
+
+          if (cityPrices) {
+  fuelPricesElement.innerHTML = `
+    <span class="text-blue-600 font-bold">${userCity}</span> - 
+    <span class="text-red-600">Benzin: ${cityPrices.benzin} TL/L</span>, 
+    <span class="text-yellow-600">Dizel: ${cityPrices.dizel} TL/L</span>, 
+    <span class="text-green-600">LPG: ${cityPrices.lpg} TL/L</span>
+  `;
+} else {
+            fuelPricesElement.innerText = `${userCity} için fiyat bilgisi bulunamadı.`;
+          }
+        });
+    })
+    .catch(error => {
+      document.getElementById('fuelPrices').innerText = 'Akaryakıt için konum veya fiyat verisi alınamadı.';
+      console.error(error);
+    });
+</script>
+
+<script>
+  const btn = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

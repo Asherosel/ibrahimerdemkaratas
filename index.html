@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArabaDünyası</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Hamburger Buton (Mobilde Gözükecek) -->
+      <button id="menu-button" class="md:hidden text-red-600 text-3xl focus:outline-none">
+        ☰
+      </button>
+      <a href="index.html"><h1 class="text-2xl font-bold text-red-600">ArabaDünyası</h1></a>
+      <ul id="menu" class="flex space-x-6 hidden md:flex md:space-x-6 md:items-center">
+        <li><a href="index.html" class="text-red-600 font-semibold">Ana Sayfa</a></li>
+        <li><a href="brands.html" class="hover:text-red-500">Markalar</a></li>
+        <li><a href="haberler.html" class="hover:text-red-500">Haberler</a></li>
+        <li><a href="blog.html" class="hover:text-red-500">Blog</a></li>
+        <li><a href="iletisim.html" class="hover:text-red-500">İletişim</a></li>
+      </ul>
+      <div id="fuelPrices" class="font-semibold"></div>
+    </div>
+
+    <!-- Mobilde açılır menü -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <ul class="space-y-2">
+          <li><a href="index.html" class="block text-red-600 font-semibold">Ana Sayfa</a></li>
+          <li><a href="brands.html" class="block hover:text-red-500">Markalar</a></li>
+          <li><a href="haberler.html" class="block hover:text-red-500">Haberler</a></li>
+          <li><a href="blog.html" class="block hover:text-red-500">Blog</a></li>
+          <li><a href="iletisim.html" class="block hover:text-red-500">İletişim</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-red-600 text-white py-16 text-center">
+    <h2 class="text-4xl font-bold mb-4">En Yeni Araba Haberleri ve İncelemeleri</h2>
+    <p class="text-lg">Araba markaları, ehliyet bilgileri ve trafik haberleri tek bir yerde!</p>
+  </section>
+
+  <!-- Marka Kartları -->
+  <section class="max-w-7xl mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6">Popüler Markalar</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <a href="bmw.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">BMW</p>
+      </div>
+    </a>
+    <a href="mercedes.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Mercedes-Benz_Star.svg/1024px-Mercedes-Benz_Star.svg.png" alt="Mercedes" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Mercedes</p>
+      </div>
+    </a>
+    <a href="tesla.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" alt="Tesla" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Tesla</p>
+      </div>
+    </a>
+    <a href="audi.html" class="block bg-white rounded-lg hover:shadow-lg transition">
+      <div class="bg-white p-4 shadow rounded-lg text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg" alt="Audi" class="h-16 mx-auto mb-2">
+        <p class="font-semibold">Audi</p>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <!-- Haberler -->
+  <section class="bg-white py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-2xl font-bold mb-6">Son Haberler</h3>
+      <ul class="space-y-4">
+        <a href="haberdetay-1.html">
+        <li class="border-b pb-4">
+          <h4 class="font-semibold">2025 Tesla Model X Tanıtıldı!</h4>
+          <p class="text-sm text-gray-600">Yeni özellikler ve menzil geliştirmeleri dikkat çekiyor.</p>
+        </li>
+        </a>
+        <li class="border-b pb-4">
+            <a href="haberdetay-2.html">
+                <h4 class="font-semibold">BMW Elektrikli Modellerini Genişletiyor</h4>
+                <p class="text-sm text-gray-600">iX serisine yeni bir SUV modeli eklendi.</p>
+            </a>  
+        </li>
+        <li class="border-b pb-4">
+            <a href="haberdetay-3.html">
+                <h4 class="font-semibold">Audi, Yeni Elektrikli Coupe Modeli e-Tron GT2’yi Tanıttı</h4>
+                <p class="text-sm text-gray-600">Performans ve verimlilikte sınırları zorlayan yepyeni bir coupe.</p>
+            </a>  
+        </li>
+        <li class="border-b pb-4">
+            <a href="haberdetay-4.html">
+                <h4 class="font-semibold">Porsche, Taycan Cross Turismo 2.0 ile Sınırları Zorluyor</h4>
+                <p class="text-sm text-gray-600">Geliştirilmiş performans ve menzil ile Taycan ailesi büyüyor.</p>
+            </a>  
+        </li>
+        <li class="border-b pb-4">
+            <a href="haberdetay-5.html">
+                <h4 class="font-semibold">Lamborghini, Elektrikli Süper SUV Modeli Revuelto EV'yi Duyurdu</h4>
+                <p class="text-sm text-gray-600">Güç, hız ve sürdürülebilirlik bir arada.</p>
+            </a>  
+        </li>
+        <li class="border-b pb-4">
+            <a href="haberdetay-6.html">
+                <h4 class="font-semibold">Ferrari'den Elektrikli Süper Otomobil Atağı</h4>
+                <p class="text-sm text-gray-600">SF90e modeliyle performansta yeni bir çağ başlıyor.</p>
+            </a>  
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="bg-white py-2 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-2xl font-bold mb-6">Blog Yazıları</h3>
+      <ul class="space-y-4">
+        <a href="blogdetay-1.html">
+        <li class="border-b pb-4">
+          <h4 class="font-semibold">2025 Ehliyet Alma Rehberi</h4>
+          <p class="text-sm text-gray-600">Ehliyet almak isteyenler için tüm aşamaları ve dikkat edilmesi gerekenleri listeledik.</p>
+        </li>
+        </a>
+        <li class="border-b pb-4">
+            <a href="blogdetay-2.html">
+                <h4 class="font-semibold">Trafik Cezaları ve Puan Sistemi</h4>
+                <p class="text-sm text-gray-600">Yeni yılda uygulanan trafik ceza tutarları ve puan sistemine dair detaylar.</p>
+            </a>  
+        </li>
+        <li class="border-b pb-4">
+            <a href="blogdetay-3.html">
+                <h4 class="font-semibold">Yeni Sürücüler İçin Öneriler</h4>
+                <p class="text-sm text-gray-600">Yola yeni çıkanlar için güvenli sürüş tüyoları ve temel kurallar.</p>
+            </a>  
+        </li>
+        <li class="border-b pb-4">
+            <a href="blogdetay-4.html">
+                <h4 class="font-semibold">Hangi Araç Tipi Size Uygun?</h4>
+                <p class="text-sm text-gray-600">SUV, sedan, hatchback... Seçiminizi yapmadan önce bu yazıya göz atın!</p>
+            </a>  
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sosyal Medya -->
+  <section class="max-w-7xl mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6">Sosyal Medyada Araba Dünyası</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-4 shadow rounded-lg">
+        <blockquote class="twitter-tweet"><a href="https://twitter.com/Tesla/status/1927184148139044892"></a></blockquote>
+      </div>
+      <div class="bg-white p-4 shadow rounded-lg">
+        <div class="bg-white rounded-lg shadow-md max-w-sm mx-auto overflow-hidden">
+            <a href="https://www.instagram.com/p/DKEq0ebIb-o/" target="_blank" class="block hover:opacity-90 transition">
+              <img src="bmwpost.png" alt="Instagram Gönderisi" class="w-full h-auto">
+              <div class="p-4">
+                <p class="text-gray-800 font-semibold text-sm">Instagram'da bu gönderiyi gör</p>
+                <p class="text-gray-500 text-xs mt-1">@bmw tarafından paylaşıldı</p>
+              </div>
+            </a>
+          </div>          
+      </div>
+      <div class="bg-white p-4 shadow rounded-lg">
+        <blockquote class="twitter-tweet"><a href="https://twitter.com/auditurkiye/status/1892551441123881148"></a></blockquote>
+      </div>
+      <div class="bg-white p-4 shadow rounded-lg">
+        <blockquote class="twitter-tweet"><a href="https://twitter.com/Ferrari/status/1928109765953224713"></a></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 ArabaDünyası. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <!-- Twitter script -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>
+  // Akaryakıt fiyatları JSON dosyasının yolu
+  const fuelDataUrl = 'akaryakit.json'; // JSON dosyanın yolunu doğru yaz
+
+  // Kullanıcının şehrini IP tabanlı servisle alacağız
+  fetch('https://ipinfo.io?token=a3bde3d00adaf7') //   https://ipinfo.io?token=a3bde3d00adaf7  BUNU UNUTMA
+    .then(response => response.json())
+    .then(locationData => {
+      const userCity = locationData.city;
+      if (!userCity) throw new Error('Şehir bilgisi alınamadı.');
+
+      // JSON dosyasını çek
+      fetch(fuelDataUrl)
+        .then(response => response.json())
+        .then(prices => {
+          const cityPrices = prices[userCity];
+          const fuelPricesElement = document.getElementById('fuelPrices');
+
+          if (cityPrices) {
+  fuelPricesElement.innerHTML = `
+    <span class="text-blue-600 font-bold">${userCity}</span> - 
+    <span class="text-red-600">Benzin: ${cityPrices.benzin} TL/L</span>, 
+    <span class="text-yellow-600">Dizel: ${cityPrices.dizel} TL/L</span>, 
+    <span class="text-green-600">LPG: ${cityPrices.lpg} TL/L</span>
+  `;
+} else {
+            fuelPricesElement.innerText = `${userCity} için fiyat bilgisi bulunamadı.`;
+          }
+        });
+    })
+    .catch(error => {
+      document.getElementById('fuelPrices').innerText = 'Akaryakıt için konum veya fiyat verisi alınamadı.';
+      console.error(error);
+    });
+</script>
+
+<script>
+  const btn = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+
+</body>
+</html>

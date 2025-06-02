@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim | ArabaDünyası</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                  <!-- Hamburger Buton (Mobilde Gözükecek) -->
+      <button id="menu-button" class="md:hidden text-red-600 text-3xl focus:outline-none">
+        ☰
+      </button>
+      <a href="index.html"><h1 class="text-2xl font-bold text-red-600">ArabaDünyası</h1></a>
+      <ul id="menu" class="flex space-x-6 hidden md:flex md:space-x-6 md:items-center">
+        <li><a href="index.html" class="hover:text-red-500">Ana Sayfa</a></li>
+        <li><a href="brands.html" class="hover:text-red-500">Markalar</a></li>
+        <li><a href="haberler.html" class="hover:text-red-500">Haberler</a></li>
+        <li><a href="blog.html" class="hover:text-red-500">Blog</a></li>
+        <li><a href="iletisim.html" class="text-red-600 font-semibold">İletişim</a></li>
+      </ul>
+      <div id="fuelPrices" class="font-semibold"></div>
+    </div>
+    
+    <!-- Mobilde açılır menü -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <ul class="space-y-2">
+          <li><a href="index.html" class="block hover:text-red-500">Ana Sayfa</a></li>
+          <li><a href="brands.html" class="block hover:text-red-500">Markalar</a></li>
+          <li><a href="haberler.html" class="block hover:text-red-500">Haberler</a></li>
+          <li><a href="blog.html" class="block hover:text-red-500">Blog</a></li>
+          <li><a href="iletisim.html" class="block text-red-600 font-semibold">İletişim</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- Başlık -->
+  <section class="bg-red-600 text-white py-12 text-center">
+    <h2 class="text-4xl font-bold mb-2">Bize Ulaşın</h2>
+    <p class="text-lg">Her türlü soru, öneri ve iş birliği için bizimle iletişime geçebilirsiniz.</p>
+  </section>
+<main class="flex-grow">
+  <!-- İletişim İçeriği -->
+  <section class="max-w-7xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-8">
+    <!-- İletişim Bilgileri -->
+    <div>
+      <h3 class="text-2xl font-bold mb-4">İletişim Bilgileri</h3>
+      <p class="mb-2"><strong>Adres:</strong> Antalya, Türkiye</p>
+      <p class="mb-2"><strong>Telefon:</strong> +90 555 123 45 67</p>
+      <p class="mb-2"><strong>E-posta:</strong> info@arabadunyasi.com</p>
+      <p class="mb-2"><strong>Çalışma Saatleri:</strong> Pazartesi - Cuma: 09:00 - 18:00</p>
+    </div>
+
+    <!-- İletişim Formu -->
+    <div class="bg-white p-6 shadow rounded-lg">
+      <h3 class="text-xl font-semibold mb-4">İletişim Formu</h3>
+      <form action="#" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Adınız Soyadınız" class="w-full border p-2 rounded">
+        <input type="email" name="email" placeholder="E-posta Adresiniz" class="w-full border p-2 rounded">
+        <textarea name="message" rows="5" placeholder="Mesajınız" class="w-full border p-2 rounded"></textarea>
+        <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Gönder</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="mt-8">
+    <iframe class="w-full h-96 rounded" src="https://maps.google.com/maps?q=Antalya&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+</main>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 ArabaDünyası. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+  // Akaryakıt fiyatları JSON dosyasının yolu
+  const fuelDataUrl = 'akaryakit.json'; // JSON dosyanın yolunu doğru yaz
+
+  // Kullanıcının şehrini IP tabanlı servisle alacağız
+  fetch('https://ipinfo.io?token=a3bde3d00adaf7') //   https://ipinfo.io?token=a3bde3d00adaf7  BUNU UNUTMA
+    .then(response => response.json())
+    .then(locationData => {
+      const userCity = locationData.city;
+      if (!userCity) throw new Error('Şehir bilgisi alınamadı.');
+
+      // JSON dosyasını çek
+      fetch(fuelDataUrl)
+        .then(response => response.json())
+        .then(prices => {
+          const cityPrices = prices[userCity];
+          const fuelPricesElement = document.getElementById('fuelPrices');
+
+          if (cityPrices) {
+  fuelPricesElement.innerHTML = `
+    <span class="text-blue-600 font-bold">${userCity}</span> - 
+    <span class="text-red-600">Benzin: ${cityPrices.benzin} TL/L</span>, 
+    <span class="text-yellow-600">Dizel: ${cityPrices.dizel} TL/L</span>, 
+    <span class="text-green-600">LPG: ${cityPrices.lpg} TL/L</span>
+  `;
+} else {
+            fuelPricesElement.innerText = `${userCity} için fiyat bilgisi bulunamadı.`;
+          }
+        });
+    })
+    .catch(error => {
+      document.getElementById('fuelPrices').innerText = 'Akaryakıt için konum veya fiyat verisi alınamadı.';
+      console.error(error);
+    });
+</script>
+
+<script>
+  const btn = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

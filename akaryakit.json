@@ -1,0 +1,27 @@
+{
+  "İstanbul": {
+    "benzin": "41.25",
+    "dizel": "40.10",
+    "lpg": "20.15"
+  },
+  "Ankara": {
+    "benzin": "41.10",
+    "dizel": "39.90",
+    "lpg": "20.00"
+  },
+  "İzmir": {
+    "benzin": "41.30",
+    "dizel": "40.20",
+    "lpg": "20.10"
+  },
+  "Antalya": {
+    "benzin": "41.30",
+    "dizel": "40.20",
+    "lpg": "20.10"
+  },
+  "Erzurum": {
+    "benzin": "40.30",
+    "dizel": "40.00",
+    "lpg": "20.00"
+  }
+}
